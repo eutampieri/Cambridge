@@ -5,6 +5,7 @@
       "type": "normal",
       "name": "Reading and Use Of English",
       "tasks":[
+        {
         "type": "multipleChoices",
         "name": "Part 1",
         "assignment": "For questions <b>1-8</b>, read the text below and decide which answer (<b>A</b>, <b>B</b>, <b>C</b> or <b>D</b> best fits each gap. There is an example at the beginning (0)",
@@ -21,6 +22,7 @@
           ["attended","participated","included","associated"]
         ],
         "key": [1,2,1,3,2,0,3,1]
+        }
       ]
     }
   ]
