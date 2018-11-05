@@ -6,8 +6,7 @@
       function getUrl(url) {
       	return new Promise(function(resolve,reject){
 	        var webrequest = new XMLHttpRequest();
-        	webrequest.open('POST', url, true);
-        	//webrequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");    
+        	webrequest.open('GET', url, true);
 	        webrequest.onload=function(){
 		        resolve(webrequest.responseText);
 	        };
@@ -18,8 +17,8 @@
         getUrl("exams/"+id+".json").then(function(r){
           var examData = JSON.parse(r);
           document.getElementsByClassName("container")[0].innerHTML="<h1>"+examData.name+"</h1><h2>Select a task</h2>";
-          for(var i in examData.tasks){
-            console.log(examData.tasks[i]);
+          for(var i in examData.papers){
+            console.log(examData.papers[i]);
           }
         });
       }
