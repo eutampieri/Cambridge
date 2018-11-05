@@ -28,19 +28,19 @@
         getUrl("exams.json").then(function(d){
           var data=JSON.parse(d);
           for(var i in data){
-            function(){
+            (function(){
               var thisI=i;
               return new function(){
                 var btn = document.createElement("a");
                 btn.role="button";
                 btn.classList.add("btn");
-	              btn.classList.add("d-block");
+	        btn.classList.add("d-block");
                 btn.classList.add("btn-primary");
                 btn.innerHTML=data[i].name;
                 btn.onclick=function(){loadExam(data[thisI].id);};
                 document.getElementsByClassName("container")[0].appendChild(btn);
               }
-            }();
+            })();
           }
         });
       }
